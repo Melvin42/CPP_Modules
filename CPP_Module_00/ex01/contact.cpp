@@ -6,33 +6,57 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 17:07:22 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/14 17:28:21 by melperri         ###   ########.fr       */
+/*   Updated: 2022/01/19 18:04:09 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.h"
 
-void	contact::ft_first_name(const char *first_name)
+Contact::Contact()
 {
-	std::cout << first_name << std::endl;
+	ft_first_name();
+	ft_last_name();
+	ft_nickname();
+	ft_phone_number();
+	ft_darkest_secret();
 }
 
-void	contact::ft_last_name(const char *last_name)
+void	Contact::ft_first_name()
 {
-	std::cout << last_name << std::endl;
+	std::cout << "Enter first name :";
+	std::getline(std::cin, m_first_name);
 }
 
-void	contact::ft_nickname(const char *nickname)
+
+void	Contact::ft_last_name()
 {
-	std::cout << nickname << std::endl;
+	std::cout << "Enter last name :";
+	std::getline(std::cin, m_last_name);
 }
 
-void	contact::ft_phone_number(const char *phone_number)
+void	Contact::ft_nickname()
 {
-	std::cout << phone_number << std::endl;
+	std::cout << "Enter nickname :";
+	std::getline(std::cin, m_nickname);
 }
 
-void	contact::ft_darkest_secret(const char *darkest_secret)
+void	Contact::ft_phone_number()
 {
-	std::cout << darkest_secret << std::endl;
+	std::cout << "Enter phone number :";
+	std::getline(std::cin, m_phone_number);
+}
+
+void	Contact::ft_darkest_secret()
+{
+	std::cout << "Enter darkest secret :";;
+	std::getline(std::cin, m_darkest_secret);
+}
+
+void	Contact::ft_display()
+{
+	std::cout << m_first_name << std::endl;
+	std::cout << m_last_name << std::endl;
+	std::cout << m_nickname << std::endl;
+	std::cout << m_phone_number << std::endl;
+	std::cout << m_darkest_secret << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 17:06:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/14 17:22:14 by melperri         ###   ########.fr       */
+/*   Updated: 2022/01/19 17:57:57 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,24 @@
 
 #include "phonebook.h"
 
-class contact {
+class Contact {
 	public :
 
-	void	ft_first_name(const char *first_name);
-	void	ft_last_name(const char *last_name);
-	void	ft_nickname(const char *nickname);
-	void	ft_phone_number(const char *phone_number);
-	void	ft_darkest_secret(const char *darkest_secret);
+	Contact();
+	void	ft_first_name();
+	void	ft_last_name();
+	void	ft_nickname();
+	void	ft_phone_number();
+	void	ft_darkest_secret();
+	void	ft_display();
 
 	private :
 
-	std::string	first_name;
-	std::string	last_name;
-	std::string	nickname;
-	std::string	phone_number;
-	std::string	darkest_secret;
+	std::string	m_first_name;
+	std::string	m_last_name;
+	std::string	m_nickname;
+	std::string	m_phone_number;
+	std::string	m_darkest_secret;
 };
 
 #endif
