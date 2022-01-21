@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.h                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 15:17:42 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/21 00:51:55 by melperri         ###   ########.fr       */
+/*   Created: 2022/01/20 23:25:51 by melperri          #+#    #+#             */
+/*   Updated: 2022/01/21 00:58:28 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-# define ADD "ADD"
-# define SEARCH "SEARCH"
-# define EXIT "EXIT"
+# include "phonebook.h"
 
-#include <iostream>
-#include <iomanip>
-#include <cstdlib>
-#include <limits>
-#include <cstring>
-#include "Contact.hpp"
-#include "PhoneBook.hpp"
+class PhoneBook {
+	public :
+
+	PhoneBook();
+	void	add_contact(const int i);
+	void	ft_display(const int size);
+
+	private :
+
+	Contact contacts[8];
+};
 
 #endif

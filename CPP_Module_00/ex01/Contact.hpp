@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 17:06:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/19 17:57:57 by melperri         ###   ########.fr       */
+/*   Created: 2022/01/20 22:02:55 by melperri          #+#    #+#             */
+/*   Updated: 2022/01/21 01:29:17 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ class Contact {
 	public :
 
 	Contact();
-	void	ft_first_name();
-	void	ft_last_name();
-	void	ft_nickname();
-	void	ft_phone_number();
-	void	ft_darkest_secret();
-	void	ft_display();
+	void		add_first_name();
+	void		add_last_name();
+	void		add_nickname();
+	void		add_phone_number();
+	void		add_darkest_secret();
+	std::string	format_str(std::string str);
+	void		search_display(const int i);
+	void		display_one(const int i);;
 
 	private :
 
