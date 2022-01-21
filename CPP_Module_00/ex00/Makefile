@@ -8,7 +8,7 @@ SRC = megaphone.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-all = $(NAME)
+all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(SRC)
