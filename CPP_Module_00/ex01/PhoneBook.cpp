@@ -6,18 +6,16 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 23:25:48 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/21 03:32:02 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:42:40 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.h"
 
-PhoneBook::PhoneBook()
-{
+PhoneBook::PhoneBook() {
 }
 
-void	PhoneBook::add_contact(const int i)
-{
+void	PhoneBook::add_contact(const int i) {
 	contacts[i].add_first_name();
 	contacts[i].add_last_name();
 	contacts[i].add_nickname();
@@ -25,8 +23,7 @@ void	PhoneBook::add_contact(const int i)
 	contacts[i].add_darkest_secret();
 }
 
-void	PhoneBook::ft_display(const int size)
-{
+void	PhoneBook::ft_display(const int size) {
 	std::string	index;
 
 	for (int i = 0; i < size; i++) {

@@ -6,8 +6,15 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 10:50:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/21 10:51:43 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:54:55 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp" 
 
+int	main(int ac, char **av) {
+	(void)ac;
+	(void)av;
+	zombieHorde(3, "Robert");
+	return 0;
+}

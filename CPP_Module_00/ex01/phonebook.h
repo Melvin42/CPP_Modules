@@ -6,16 +6,16 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 15:17:42 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/21 00:51:55 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:43:07 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#define PHONEBOOK_H
 
-# define ADD "ADD"
-# define SEARCH "SEARCH"
-# define EXIT "EXIT"
+#define ADD "ADD"
+#define SEARCH "SEARCH"
+#define EXIT "EXIT"
 
 #include <iostream>
 #include <iomanip>

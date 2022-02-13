@@ -6,14 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 02:11:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/01/21 03:39:19 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:41:56 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.h"
 
-int	main(int ac, char **av)
-{
+int	main(int ac, char **av) {
 	(void)ac;
 	(void)av;
 	PhoneBook	phonebook;
@@ -37,5 +36,5 @@ int	main(int ac, char **av)
 			std::cout << "Bad command." << std::endl;
 		std::cout << "$>";
 	}
-	return (0);
+	return 0;
 }
