@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 10:50:21 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/13 22:38:56 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:23:49 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Zombie {
 
 	private :
 
-		std::string	_name;
+	std::string	_name;
 
 };
 

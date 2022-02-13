@@ -2,7 +2,7 @@ NAME = moreBrainz
 
 CC = c++
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -MMD -std=c++98
 
 SRC = main.cpp Zombie.cpp ZombieHorde.cpp
 
@@ -10,12 +10,12 @@ OBJ = ${SRC:.cpp=.o}
 
 DEP = ${OBJ:.o=.d}
 
--include $(DEP)
-
 .cpp.o:
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 all : $(NAME)
+
+-include $(DEP)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)

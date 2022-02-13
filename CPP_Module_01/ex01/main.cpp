@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 10:50:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/13 22:54:55 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:34:45 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 int	main(int ac, char **av) {
 	(void)ac;
 	(void)av;
-	zombieHorde(3, "Robert");
+	Zombie *ZombieHorde = zombieHorde(0, "Robert");
+	
+	if (ZombieHorde) {
+		for (int i = 0; i < 3; i++) {
+			ZombieHorde[i].announce();
+		}
+		delete[] ZombieHorde;
+	}
 	return 0;
 }
