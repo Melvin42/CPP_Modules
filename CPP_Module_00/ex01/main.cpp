@@ -6,15 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 02:11:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/13 22:41:56 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:46:09 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.h"
 
-int	main(int ac, char **av) {
-	(void)ac;
-	(void)av;
+int	main(void) {
 	PhoneBook	phonebook;
 	int			i = 0;
 	int			size = 0;

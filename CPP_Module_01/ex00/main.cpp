@@ -6,15 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 08:40:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/13 22:51:52 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:46:48 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main(int ac, char **av) {
-	(void)ac;
-	(void)av;
+int	main(void) {
 	Zombie*	Elise;
 	Zombie	Lucie("Lucie");
 
