@@ -2,7 +2,7 @@ NAME = BraiiiiiiinnnzzzZ
 
 CC = c++
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
 
 SRC = main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
 
@@ -21,8 +21,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 
 clean :
-	rm -f $(OBJ)
-	rm -f $(DEP)
+	rm -f $(OBJ) $(DEP)
 
 fclean : clean
 	rm -f $(NAME)

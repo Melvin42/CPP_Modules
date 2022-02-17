@@ -1,10 +1,10 @@
-NAME = hiThisIsBrain
+NAME = Canon_Form
 
 CC = c++
 
-CPPFLAGS = -Wall -Wextra -Werror -MMD -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
 
-SRC = main.cpp
+SRC = main.cpp Fixed.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

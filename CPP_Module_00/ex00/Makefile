@@ -21,8 +21,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 
 clean :
-	rm -f $(OBJ)
-	rm -f $(DEP)
+	rm -f $(OBJ) $(DEP)
 
 fclean : clean
 	rm -f $(NAME)
