@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:25:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/17 03:09:22 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/17 03:26:16 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@ Karen::~Karen() {
 
 void	Karen::complain(std::string level) {
 	void		(*ptr[4])(void) = {debug, info, warning, error};
-	const char	*str[4] = {"debug", "info", "warning", "error"};
+	const char	*str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for(int i = 0; i < 4; i++) {
 		if (level.compare(str[i]) == 0) {
 			ptr[i]();
-			break ;
+			return ;
 		}
 	}
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }
 
 void	Karen::debug(void) {
