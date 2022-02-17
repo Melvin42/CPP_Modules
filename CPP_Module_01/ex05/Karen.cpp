@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:25:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/17 02:43:31 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/17 02:57:11 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	Karen::complain(std::string level) {
 			break ;
 		}
 	}
-
 }
 
 void	Karen::debug(void) {
