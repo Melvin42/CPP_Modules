@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 05:11:51 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/19 02:33:34 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/23 16:02:50 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ int	Fixed::toInt(void) const {
 
 Fixed &Fixed::operator=(const Fixed &obj) {
 	std::cout << GREEN << "Copy assignement operator called" << END_COLOR << std::endl;
-	this->setRawBits(obj.getRawBits());
+
+	_fixedPoint = obj._fixedPoint;
 	return *this;
 }
 
