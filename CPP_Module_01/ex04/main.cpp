@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 23:23:43 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/17 01:22:26 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/25 04:27:34 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,4 @@ int	main(int ac, char **av) {
 		out_file.close();
 	}
 	return 0;
-} 
+}

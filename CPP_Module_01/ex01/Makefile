@@ -4,7 +4,7 @@ CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -MMD -std=c++98
 
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

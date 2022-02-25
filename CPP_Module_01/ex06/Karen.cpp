@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:25:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/17 03:26:16 by melperri         ###   ########.fr       */
+/*   Updated: 2022/02/25 04:43:35 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ void	Karen::complain(std::string level) {
 
 	for(int i = 0; i < 4; i++) {
 		if (level.compare(str[i]) == 0) {
-			ptr[i]();
+			while(i < 4) {
+				ptr[i]();
+				i++;
+			}
 			return ;
 		}
 	}
