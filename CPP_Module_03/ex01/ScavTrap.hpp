@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/25 05:04:49 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/02 17:29:17 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
+#include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
 	public:

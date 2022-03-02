@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/25 05:04:56 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/02 18:44:22 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ ScavTrap::~ScavTrap() {
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap) {
 	std::cout << "Copy assignement operator called" << std::endl;
+	this->setName(scavtrap.getName());
+	this->setHit(scavtrap.getHit());
+	this->setEnergy(scavtrap.getEnergy());
+	this->setAttack(scavtrap.getAttack());
 	return *this;
 }

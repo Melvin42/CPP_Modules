@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:09:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/23 17:11:53 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:16:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,22 @@ int	ClapTrap::getHit(void) const {
 
 unsigned int	ClapTrap::getAttack(void) const {
 	return this->_attack;
+}
+
+void	ClapTrap::setName(std::string name) {
+	_name = name;
+}
+
+void	ClapTrap::setHit(int hit) {
+	_hit = hit;
+}
+
+void	ClapTrap::setEnergy(int energy) {
+	_energy = energy;
+}
+
+void	ClapTrap::setAttack(unsigned int attack) {
+	_attack = attack;
 }
 
 void	ft_print_energy(const ClapTrap &claptrap) {
@@ -109,4 +125,3 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 	_attack = claptrap._attack;
 	return *this;
 }
-
