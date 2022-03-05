@@ -6,16 +6,21 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:07:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/23 17:35:01 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/05 16:34:29 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	ClapTrap	john("John");
-	ClapTrap	rambo("Rambo");
+//	ClapTrap	john("John");
+//	ClapTrap	rambo("Rambo");
+	ScavTrap	scavtrap;
+	ScavTrap	scavy(scavtrap);
 
+	//Need to do the main to show good behavior of class.
+	/*
 	ft_print_hit(john);
 	ft_print_hit(rambo);
 	rambo.attack(john.getName());
@@ -41,6 +46,7 @@ int	main(void) {
 	john.takeDamage(rambo.getAttack());
 	rambo.attack(john.getName());
 	rambo.beRepaired(1);
+	*/
 
 	return 0;
 }

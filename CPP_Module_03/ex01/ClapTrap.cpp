@@ -6,30 +6,30 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:09:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/02 15:16:54 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/05 16:33:47 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
-	std::cout << GREEN_IT << "Default constructor called" << END_COLOR << std::endl;
+	std::cout << GREEN_IT << "Clap's default constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hit(10), _energy(10), _attack(0) {
-	std::cout << GREEN_IT << "Parametric constructor called" << END_COLOR << std::endl;
+ClapTrap::ClapTrap(std::string name) : _name(name), _hit(100), _energy(50), _attack(20) {
+	std::cout << GREEN_IT << "Clap's parametric constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap) {
-	std::cout << GREEN_IT << "Copy constructor called" << END_COLOR << std::endl;
+	std::cout << GREEN_IT << "Clap's copy constructor called" << END_COLOR << std::endl;
 	*this = claptrap;
 	return ;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << GREEN_IT << "Destructor called" << END_COLOR << std::endl;
+	std::cout << GREEN_IT << "Clap's destructor called" << END_COLOR << std::endl;
 	return ;
 }
 
@@ -95,7 +95,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 	std::cout << "ClapTrap " << this->_name
 		<< ", taking " << RED << amount << END_COLOR
 		<< " points of damage!" << std::endl;
-	if (this->_hit - amount < 0) {
+	if (this->_hit - (int)amount < 0) {
 		this->_hit = 0;
 	} else {
 		this->_hit -= amount;
@@ -118,7 +118,7 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
-	std::cout << "Copy assignement operator called" << std::endl;
+	std::cout << "Clap's copy assignement operator called" << std::endl;
 	_name = claptrap._name;
 	_hit = claptrap._hit;
 	_energy = claptrap._energy;
