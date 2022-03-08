@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/02 17:29:17 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/07 12:52:44 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ScavTrap : public ClapTrap {
 	public:
 
 		ScavTrap();
+		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &scavtrap);
 		~ScavTrap();
 

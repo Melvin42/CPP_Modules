@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:10:14 by melperri          #+#    #+#             */
-/*   Updated: 2022/02/23 17:35:58 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/08 15:39:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ class ClapTrap {
 	private:
 
 		std::string		_name;
-		int				_hit;
-		int				_energy;
+		unsigned int	_hit;
+		unsigned int	_energy;
 		unsigned int	_attack;
 };
 
