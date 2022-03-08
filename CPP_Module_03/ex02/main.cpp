@@ -12,6 +12,7 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void) {
 	ClapTrap	rambo("Rambo");
@@ -24,10 +25,13 @@ int	main(void) {
 	ScavTrap	scav_cpy(scav_def);
 	ScavTrap	scav_name("Michel");
 
+	FragTrap	fragy("Jean-Albert");
+
 	rambo.printStatus();
 	scav_def.printStatus();
 	scav_cpy.printStatus();
 	scav_name.printStatus();
+	fragy.printStatus();
 
 	ft_print_hit(scav_cpy);
 	scav_cpy.attack(rambo.getName());
@@ -58,6 +62,7 @@ int	main(void) {
 	scav_def.printStatus();
 	scav_cpy.printStatus();
 	scav_name.printStatus();
+	fragy.printStatus();
 
 	return 0;
 }
