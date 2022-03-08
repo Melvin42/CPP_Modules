@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 15:54:04 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/08 18:25:27 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
 }
 
 void	FragTrap::highFivesGuys(void) {
-	if (this->getEnergy() > 0)
+	if (this->getHit() > 0)
 		std::cout << this->getName() << " check me that bro!" << std::endl;
 	else
 		std::cout << this->getName() << " can't check you, he is dead.." << std::endl;
