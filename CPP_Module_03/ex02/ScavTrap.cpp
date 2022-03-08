@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 15:55:18 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/08 15:54:04 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ void	ScavTrap::guardGate(void) {
 	if (this->getEnergy() > 0)
 		std::cout << this->getName() << " is now in Gate keeper mode" << std::endl;
 	else
-		std::cout << this->getName() << " can't go in Gate keeper mode" << std::endl;
+		std::cout << this->getName() << " is can't go in Gate keeper mode" << std::endl;
 }
