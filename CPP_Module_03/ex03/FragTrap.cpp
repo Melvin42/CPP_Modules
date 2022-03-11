@@ -6,14 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 18:25:27 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:41:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap() {
-	this->setName("name");
+FragTrap::FragTrap() : ClapTrap("Frag") {
 	this->setHit(100);
 	this->setEnergy(100);
 	this->setAttack(30);
@@ -22,8 +21,7 @@ FragTrap::FragTrap() : ClapTrap() {
 	return ;
 }
 
-FragTrap::FragTrap(std::string name) {
-	this->setName(name);
+FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	this->setHit(100);
 	this->setEnergy(100);
 	this->setAttack(30);
@@ -32,7 +30,7 @@ FragTrap::FragTrap(std::string name) {
 	return ;
 }
 
-FragTrap::FragTrap(const FragTrap &fragtrap) {
+FragTrap::FragTrap(const FragTrap &fragtrap) : ClapTrap(fragtrap) {
 	std::cout << GREEN_IT << "fragtrap " << this->getName()
 		<< " copy constructor called" << END_COLOR << std::endl;
 	*this = fragtrap;

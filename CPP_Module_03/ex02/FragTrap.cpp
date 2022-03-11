@@ -6,41 +6,39 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 18:25:27 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/11 21:00:17 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap() {
-	this->setName("name");
+FragTrap::FragTrap() : ClapTrap("Frag") {
 	this->setHit(100);
 	this->setEnergy(100);
 	this->setAttack(30);
-	std::cout << GREEN_IT << "fragtrap " << this->getName()
+	std::cout << GREEN_IT << "Fragtrap " << this->getName()
 		<< " default constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
-FragTrap::FragTrap(std::string name) {
-	this->setName(name);
+FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	this->setHit(100);
 	this->setEnergy(100);
 	this->setAttack(30);
-	std::cout << GREEN_IT << "fragtrap " << this->getName()
+	std::cout << GREEN_IT << "Fragtrap " << this->getName()
 		<< " parametric constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
-FragTrap::FragTrap(const FragTrap &fragtrap) {
-	std::cout << GREEN_IT << "fragtrap " << this->getName()
+FragTrap::FragTrap(const FragTrap &fragtrap) : ClapTrap(fragtrap) {
+	std::cout << GREEN_IT << "Fragtrap " << this->getName()
 		<< " copy constructor called" << END_COLOR << std::endl;
 	*this = fragtrap;
 	return ;
 }
 
 FragTrap::~FragTrap() {
-	std::cout << GREEN_IT << "fragtrap " << this->getName()
+	std::cout << GREEN_IT << "Fragtrap " << this->getName()
 		<< " destructor called" << END_COLOR << std::endl;
 	return ;
 }
@@ -50,7 +48,7 @@ FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
 	this->setHit(fragtrap.getHit());
 	this->setEnergy(fragtrap.getEnergy());
 	this->setAttack(fragtrap.getAttack());
-	std::cout << GREEN_IT << "fragtrap " << this->getName()
+	std::cout << GREEN_IT << "Fragtrap " << this->getName()
 		<< " copy assignement operator called" << END_COLOR << std::endl;
 	return *this;
 }

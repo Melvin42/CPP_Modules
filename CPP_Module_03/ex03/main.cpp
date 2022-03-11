@@ -6,18 +6,24 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:07:38 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 19:29:17 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:53:44 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void) {
+	DiamondTrap	diamond;
+//	DiamondTrap	diamond("diamond");
+
+	/*
 	ClapTrap	rambo("Rambo");
 	ScavTrap	scav("Michel");
 	FragTrap	fragy("Jean-Albert");
+	DiamondTrap	diamond("diamond");
 
 	rambo.printStatus();
 	scav.printStatus();
@@ -44,6 +50,7 @@ int	main(void) {
 	rambo.printStatus();
 	scav.printStatus();
 	fragy.printStatus();
+	*/
 
 	return 0;
 }

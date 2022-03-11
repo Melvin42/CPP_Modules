@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/07 12:52:44 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/11 21:10:04 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	public:
 
 		ScavTrap();

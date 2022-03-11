@@ -6,13 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:09:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/08 17:45:56 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:05:11 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap() : _name("Clap"), _hit(10), _energy(10), _attack(0) {
 	std::cout << GREEN_IT << "Default constructor called" << END_COLOR << std::endl;
 	return ;
 }
