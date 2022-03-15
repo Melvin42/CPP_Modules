@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 21:53:08 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/11 21:53:08 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/15 02:14:05 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
+#include <string>
 
 class Animal {
 	public:

@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 02:47:33 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/12 22:04:45 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/15 03:22:00 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Cat : public Animal {
 		Cat &operator=(const Cat &cat);
 
 		virtual void	makeSound(void) const;
+
 	private:
 		Brain	*_brain;
 };

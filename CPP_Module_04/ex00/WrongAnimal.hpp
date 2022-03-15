@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 04:08:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/12 04:33:19 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/12 13:27:40 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class WrongAnimal : public Animal {
 
 		WrongAnimal &operator=(const WrongAnimal &wronganimal);
 
-		void	makeSound(void) const;
+		void	makeSound() const;
 	private:
 };
 

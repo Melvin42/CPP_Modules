@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 14:29:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/12 21:15:33 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/15 03:22:26 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ class Brain {
 		Brain();
 		Brain(const Brain &brain);
 		~Brain();
+
+		std::string	getIdeas(size_t i);
+		void	printIdeas() const;
 
 		Brain &operator=(const Brain &brain);
 
