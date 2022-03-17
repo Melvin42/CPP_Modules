@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 03:32:32 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 04:15:01 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ Bureaucrat::Bureaucrat() : _name("Bureaucrat"), _grade(150) {
 	return ;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) {
-	_name = name;
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 	if (grade < 1)
 		throw GradeTooHighException();
 	else if (grade > 150)
@@ -29,9 +28,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) {
 		<< END_COLOR << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &bureaucrat) {
-	_name = bureaucrat._name;
-	_grade = bureaucrat._grade;
+Bureaucrat::Bureaucrat(const Bureaucrat &bureaucrat) : _name(bureaucrat._name) {
 	*this = bureaucrat;
 	std::cout << GREEN_IT << "Copy " << _name << " constructor called"
 		<< END_COLOR << std::endl;
@@ -44,7 +41,7 @@ Bureaucrat::~Bureaucrat() {
 	return ;
 }
 
-std::string	Bureaucrat::getName() const {
+const std::string	Bureaucrat::getName() const {
 	return _name;
 }
 
@@ -75,7 +72,6 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw() {;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &bureaucrat) {
-	_name = bureaucrat._name;
 	_grade = bureaucrat._grade;
 	std::cout << GREEN_IT << "Copy " << _name << " assignement operator called"
 		<< END_COLOR << std::endl;
