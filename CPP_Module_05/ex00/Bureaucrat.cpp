@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 04:15:01 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 05:17:34 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Bureaucrat::~Bureaucrat() {
 	return ;
 }
 
-const std::string	Bureaucrat::getName() const {
+std::string	Bureaucrat::getName() const {
 	return _name;
 }
 

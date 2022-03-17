@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:08:16 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 04:16:03 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 05:17:51 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat &bureaucrat);
 		~Bureaucrat();
 
-		const std::string	getName() const;
-		int					getGrade() const;
-		void				increment();
-		void				decrement();
+		std::string	getName() const;
+		int			getGrade() const;
+		void		increment();
+		void		decrement();
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();
