@@ -6,24 +6,61 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 01:41:58 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 03:19:53 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 int	main() {
-	Bureaucrat	bob("Bob", 1);
-	Bureaucrat	marley("Marley", 151);
-	
 	try {
-		if (bob.getGrade() < 1 || bob.getGrade() > 150) {
-			throw std::exception();
-		} else {
-			std::cout << bob.getName() << std::endl;
-		}
+		Bureaucrat	bob("Bob", 1);
+		Bureaucrat	marley("Marley", 150);
+	
+		std::cout << bob << std::endl;
+		std::cout << marley << std::endl;
+		marley.increment();
+		std::cout << marley << std::endl;
+		bob.increment();
+		marley.decrement();
 	}
-	catch (std::exception e) {
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat	bob("Bob", 1);
+		Bureaucrat	marley("Marley", 150);
+
+		std::cout << bob << std::endl;
+		std::cout << marley << std::endl;
+		bob.increment();
+		marley.decrement();
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat	bob("Bob", 1);
+		Bureaucrat	marley("Marley", 150);
+
+		std::cout << bob << std::endl;
+		std::cout << marley << std::endl;
+		marley.increment();
+		bob.decrement();
+		std::cout << bob << std::endl;
+		std::cout << marley << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat	bob("Bob", 0);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
 	}
 	return 0;
 }

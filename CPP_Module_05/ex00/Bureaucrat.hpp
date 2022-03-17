@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:08:16 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 01:41:54 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 02:38:12 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
-#include <stdexcept>
 
 class Bureaucrat {
 	public:
@@ -33,11 +32,11 @@ class Bureaucrat {
 		void		decrement();
 
 		class GradeTooHighException : public std::exception {
-			virtual const char *wath() const throw();
+			virtual const char *what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception {
-			virtual const char *wath() const throw();
+			virtual const char *what() const throw();
 		};
 
 		Bureaucrat &operator=(const Bureaucrat &bureaucrat);
