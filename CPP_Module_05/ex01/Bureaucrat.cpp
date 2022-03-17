@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 04:15:01 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 19:28:00 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Bureaucrat::~Bureaucrat() {
 	return ;
 }
 
-const std::string	Bureaucrat::getName() const {
+std::string	Bureaucrat::getName() const {
 	return _name;
 }
 
@@ -61,6 +61,17 @@ void	Bureaucrat::decrement() {
 		throw GradeTooLowException();
 	else
 		_grade++;
+}
+
+void	Bureaucrat::signForm(const Form form) const {
+	if (form.getSign() == true) {
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	} else {
+		if (_grade > form.getSignGrade()) {
+			std::cout <<_name << " couldn't sign " << form.getName()
+				<< " because " << " is grade is too low." << std::endl;
+		}
+	}
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw() {

@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 04:19:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 05:34:00 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 18:37:03 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,32 @@ Form::~Form() {
 	return ;
 }
 
-std::string	Form::getName() {
+std::string	Form::getName() const {
 	return _name;
 }
 
-bool	Form::getSign() {
+bool	Form::getSign() const {
 	return _sign;
 }
 
-int	Form::getSignGrade() {
+int	Form::getSignGrade() const {
 	return _sign_grade;
 }
 
-int Form::getExecGrade() {
+int Form::getExecGrade() const {
 	return _exec_grade;
+}
+
+void	Form::beSigned(const Bureaucrat bureaucrat) {
+	if (bureaucrat.getGrade() <= _sign_grade)
+		_sign = true;
+}
+const char	*Form::GradeTooHighException::what() const throw() {
+	return "Grade Too High Exception";
+}
+
+const char	*Form::GradeTooLowException::what() const throw() {
+	return "Grade Too Low Exception";
 }
 
 Form &Form::operator=(const Form &form) {
@@ -54,4 +66,14 @@ Form &Form::operator=(const Form &form) {
 	std::cout << GREEN_IT << _name
 		<< " copy assignement operator called" << END_COLOR << std::endl;
 	return *this;
+}
+
+std::ostream &operator<<(std::ostream &os, const Form &form) {
+	os << form.getName() << ", form sign is "
+		<< form.getSign()
+		<< ",\n sign grade is "
+		<< form.getSignGrade()
+		<< ",\n execution grade is "
+		<< form.getExecGrade() << ".";
+	return os;
 }

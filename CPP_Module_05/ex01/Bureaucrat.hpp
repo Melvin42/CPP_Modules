@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:08:16 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 05:22:51 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 19:18:12 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
+#include "Form.hpp"
 
 class Bureaucrat {
 	public:
@@ -26,10 +27,13 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat &bureaucrat);
 		~Bureaucrat();
 
-		const std::string	getName() const;
-		int					getGrade() const;
-		void				increment();
-		void				decrement();
+		std::string	getName() const;
+		int			getGrade() const;
+
+		void		increment();
+		void		decrement();
+
+		void		signForm(const Form form) const;
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();

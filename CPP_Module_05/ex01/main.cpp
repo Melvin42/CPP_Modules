@@ -6,12 +6,13 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 05:35:34 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 14:42:08 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp" 
+#include "Form.hpp"
+
 int	main() {
 	try {
 		Bureaucrat	bob("Bob", 1);
