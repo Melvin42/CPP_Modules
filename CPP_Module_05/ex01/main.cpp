@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 14:42:08 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/18 01:36:34 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,18 @@ int	main() {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+
+	try {
+		Bureaucrat	bob("Bob", 1);
+		Form form;
+		std::cout << bob << std::endl;
+		std::cout << form << std::endl;
+		bob.signForm(form);
+		form.beSigned(bob);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
 	return 0;
 }

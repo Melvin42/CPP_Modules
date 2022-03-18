@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:08:16 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 19:18:12 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/17 22:05:42 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #define GREEN_IT "\033[32;3m"
 #define END_COLOR "\033[0m"
+
+class Form;
 
 #include <iostream>
 #include "Form.hpp"
@@ -33,7 +35,7 @@ class Bureaucrat {
 		void		increment();
 		void		decrement();
 
-		void		signForm(const Form form) const;
+		void		signForm(Form &form) const;
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();

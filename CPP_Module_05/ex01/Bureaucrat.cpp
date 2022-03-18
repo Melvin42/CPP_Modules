@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 19:28:00 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/18 01:43:09 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,12 @@ void	Bureaucrat::decrement() {
 		_grade++;
 }
 
-void	Bureaucrat::signForm(const Form form) const {
+void	Bureaucrat::signForm(Form &form) const {
 	if (form.getSign() == true) {
 		std::cout << _name << " signed " << form.getName() << std::endl;
 	} else {
-		if (_grade > form.getSignGrade()) {
-			std::cout <<_name << " couldn't sign " << form.getName()
-				<< " because " << " is grade is too low." << std::endl;
-		}
+		std::cout <<_name << " couldn't sign " << form.getName()
+			<< " because is grade is too low." << std::endl;
 	}
 }
 

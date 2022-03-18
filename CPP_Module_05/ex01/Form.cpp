@@ -6,14 +6,25 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 04:19:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/17 18:37:03 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/18 01:34:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name("Form"), _sign(false), _sign_grade(0), _exec_grade(0) {
+Form::Form() : _name("Form"), _sign(false), _sign_grade(150), _exec_grade(150) {
 	std::cout << GREEN_IT << "Default " << _name
+		<< " constructor called" << END_COLOR << std::endl;
+	return ;
+}
+
+Form::Form(std::string name, bool sign, int sign_grade, int exec_grade) :
+	_name(name), _sign(sign), _sign_grade(sign_grade), _exec_grade(exec_grade) {;
+	if (_sign_grade < 1 || _exec_grade < 1)
+		throw GradeTooHighException();
+	else if (_sign_grade > 150 || _exec_grade > 150)
+		throw GradeTooLowException();
+	std::cout << GREEN_IT << "Parametric " << _name
 		<< " constructor called" << END_COLOR << std::endl;
 	return ;
 }
@@ -49,10 +60,13 @@ int Form::getExecGrade() const {
 	return _exec_grade;
 }
 
-void	Form::beSigned(const Bureaucrat bureaucrat) {
+void	Form::beSigned(const Bureaucrat &bureaucrat) {
 	if (bureaucrat.getGrade() <= _sign_grade)
 		_sign = true;
+	else
+		throw GradeTooLowException();
 }
+
 const char	*Form::GradeTooHighException::what() const throw() {
 	return "Grade Too High Exception";
 }
@@ -71,9 +85,9 @@ Form &Form::operator=(const Form &form) {
 std::ostream &operator<<(std::ostream &os, const Form &form) {
 	os << form.getName() << ", form sign is "
 		<< form.getSign()
-		<< ",\n sign grade is "
+		<< ",\nsign grade is "
 		<< form.getSignGrade()
-		<< ",\n execution grade is "
+		<< ",\nexecution grade is "
 		<< form.getExecGrade() << ".";
 	return os;
 }
