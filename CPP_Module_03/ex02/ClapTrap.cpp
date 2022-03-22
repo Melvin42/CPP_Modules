@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 04:09:49 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/11 20:07:58 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:47:05 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hit(10), _energy(10), _atta
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap) {
+	*this = claptrap;
 	std::cout << GREEN_IT << "Claptrap " << _name
 		<< " copy constructor called" << END_COLOR << std::endl;
-	*this = claptrap;
 	return ;
 }
 

@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/11 20:41:54 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:49:07 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 }
 
 FragTrap::FragTrap(const FragTrap &fragtrap) : ClapTrap(fragtrap) {
+	*this = fragtrap;
 	std::cout << GREEN_IT << "fragtrap " << this->getName()
 		<< " copy constructor called" << END_COLOR << std::endl;
-	*this = fragtrap;
 	return ;
 }
 

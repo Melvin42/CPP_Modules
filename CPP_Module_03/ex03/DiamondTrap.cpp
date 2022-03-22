@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 19:14:48 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/11 21:45:23 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:50:01 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name) {
 	return ;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &diamondtrap) : ClapTrap(diamondtrap) , ScavTrap(diamondtrap), FragTrap(diamondtrap) {
+DiamondTrap::DiamondTrap(const DiamondTrap &diamondtrap)
+	: ClapTrap(diamondtrap) , ScavTrap(diamondtrap), FragTrap(diamondtrap) {
+	*this = diamondtrap;
 	std::cout << GREEN_IT << "Diamondtrap " << this->ScavTrap::getName()
 		<< " copy constructor called" << END_COLOR << std::endl;
-	*this = diamondtrap;
 	return ;
 }
 

@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 05:04:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/11 20:12:04 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:49:26 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ ScavTrap::ScavTrap(std::string name) {
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scavtrap) : ClapTrap(scavtrap) {
+	*this = scavtrap;
 	std::cout << GREEN_IT << "Scavtrap " << this->getName()
 		<< " copy constructor called" << END_COLOR << std::endl;
-	*this = scavtrap;
 	return ;
 }
 
