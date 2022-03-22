@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 04:09:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/15 03:43:06 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:23:50 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ WrongAnimal::WrongAnimal() : Animal("WrongAnimal") {
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &wronganimal) : Animal(wronganimal) {
+	*this = wronganimal;
 	std::cout << GREEN_IT << "WrongAnimal copy constructor called"
 		<< END_COLOR << std::endl;
-	*this = wronganimal;
 	return ;
 }
 
@@ -32,8 +32,8 @@ WrongAnimal::~WrongAnimal() {
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &wronganimal) {
-	std::cout << "WrongAnimal copy assignement operator called" << std::endl;
 	this->_type = wronganimal._type;
+	std::cout << "WrongAnimal copy assignement operator called" << std::endl;
 	return *this;
 }
 

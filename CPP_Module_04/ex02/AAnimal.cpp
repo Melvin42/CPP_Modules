@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 21:52:45 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/15 15:36:21 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:27:10 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ AAnimal::AAnimal(std::string type) : _type(type) {
 }
 
 AAnimal::AAnimal(const AAnimal &animal) {
+	*this = animal;
 	std::cout << GREEN_IT << "AAnimal " << _type
 		<< " copy constructor called" << END_COLOR << std::endl;
-	*this = animal;
 	return ;
 }
 
@@ -42,9 +42,9 @@ std::string	AAnimal::getType(void) const {
 }
 
 AAnimal &AAnimal::operator=(const AAnimal &animal) {
+	this->_type = animal._type;
 	std::cout << GREEN_IT << "AAnimal copy assignement operator called"
 		<< END_COLOR << std::endl;
-	this->_type = animal._type;
 	return *this;
 }
 

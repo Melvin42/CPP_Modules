@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 21:53:30 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/15 03:42:29 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:23:15 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ Cat::Cat() : Animal("Cat") {
 }
 
 Cat::Cat(const Cat &cat) : Animal(cat) {
+	*this = cat;
 	std::cout << GREEN_IT << "Cat copy constructor called"
 		<< END_COLOR << std::endl;
-	*this = cat;
 	return ;
 }
 
@@ -32,9 +32,9 @@ Cat::~Cat() {
 }
 
 Cat &Cat::operator=(const Cat &cat) {
+	this->_type = cat._type;
 	std::cout << "Cat copy assignement operator called"
 		<< std::endl;
-	this->_type = cat._type;
 	return *this;
 }
 

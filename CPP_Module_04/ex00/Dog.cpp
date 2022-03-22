@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 02:49:00 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/15 03:42:49 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:23:31 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ Dog::Dog() : Animal("Dog") {
 }
 
 Dog::Dog(const Dog &dog) : Animal(dog) {
+	*this = dog;
 	std::cout << GREEN_IT << "Dog copy constructor called"
 		<< END_COLOR << std::endl;
-	*this = dog;
 	return ;
 }
 
@@ -32,9 +32,9 @@ Dog::~Dog() {
 }
 
 Dog &Dog::operator=(const Dog &dog) {
+	this->_type = dog._type;
 	std::cout << "Dog copy assignement operator called"
 		<< std::endl;
-	this->_type = dog._type;
 	return *this;
 }
 

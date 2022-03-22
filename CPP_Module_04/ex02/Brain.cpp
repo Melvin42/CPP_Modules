@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 14:29:07 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/15 03:59:41 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:27:45 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ Brain::Brain() {
 }
 
 Brain::Brain(const Brain &brain) {
+	*this = brain;
 	std::cout << GREEN_IT << "Brain copy constructor called"
 		<< END_COLOR << std::endl;
-	*this = brain;
 	return ;
 }
 
@@ -51,10 +51,10 @@ void	Brain::printIdeas() const {
 }
 
 Brain &Brain::operator=(const Brain &brain) {
-	std::cout << GREEN_IT << "Brain copy assignement operator called"
-		<< END_COLOR << std::endl;
 	for (size_t i = 0; i < 100; i++) {
 		this->_ideas[i].assign(brain._ideas[i].c_str());
 	}
+	std::cout << GREEN_IT << "Brain copy assignement operator called"
+		<< END_COLOR << std::endl;
 	return *this;
 }
