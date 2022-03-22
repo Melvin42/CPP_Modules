@@ -16,10 +16,10 @@
 #define GREEN_IT "\033[32;3m"
 #define END_COLOR "\033[0m"
 
-class Form;
+class AForm;
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class Bureaucrat {
 	public:
@@ -35,7 +35,7 @@ class Bureaucrat {
 		void		increment();
 		void		decrement();
 
-		void		signForm(Form &form) const;
+		void		signForm(AForm &form) const;
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();

@@ -63,7 +63,7 @@ void	Bureaucrat::decrement() {
 		_grade++;
 }
 
-void	Bureaucrat::signForm(Form &form) const {
+void	Bureaucrat::signForm(AForm &form) const {
 	if (form.getSign() == true) {
 		std::cout << _name << " signed " << form.getName() << std::endl;
 	} else {

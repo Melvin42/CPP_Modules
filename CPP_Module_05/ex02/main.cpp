@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -69,11 +69,11 @@ int	main() {
 
 	try {
 		Bureaucrat	bob("Bob", 1);
-		Form form;
+//		Form form;
 		std::cout << bob << std::endl;
-		std::cout << form << std::endl;
-		bob.signForm(form);
-		form.beSigned(bob);
+//		std::cout << form << std::endl;
+//		bob.signForm(form);
+//		form.beSigned(bob);
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;

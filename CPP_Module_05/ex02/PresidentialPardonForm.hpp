@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:47:13 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 04:47:13 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/22 17:05:33 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,38 +17,21 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class PresidentialPardonForm {
+class PresidentialPardonForm : public AForm {
 	public:
 
 		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm &form);
-		PresidentialPardonForm(std::string name, bool sign, int sign_grade, int exec_grade);
 		~PresidentialPardonForm();
 
-		std::string	getName() const;
-		bool		getSign() const;
-		int			getSignGrade() const;
-		int			getExecGrade() const;
+		std::string	getTarget();
 
-		void		beSigned(const Bureaucrat &bureaucrat);
-
-		class GradeTooHighException : public std::exception {
-			virtual const char *what() const throw();
-		};
-
-		class GradeTooLowException : public std::exception {
-			virtual const char *what() const throw();
-		};
-
-		Form &operator=(const Form &form);
-
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &form);
 	private:
-		const std::string	_name;
-		bool				_sign;
-		const int			_sign_grade;
-		const int			_exec_grade;
+		const std::string	_target;
 };
 
 std::ostream &operator<<(std::ostream &os, const PresidentialPardonForm &form);
