@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:08:16 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:16:06 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:36:53 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Bureaucrat {
 		void		decrement();
 
 		void		signForm(AForm &form) const;
+		void		executeForm(AForm const &form) const;
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();

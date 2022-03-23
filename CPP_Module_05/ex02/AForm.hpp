@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:37:07 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:20:10 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:23:13 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 #define END_COLOR "\033[0m"
 
 class Bureaucrat;
-class PresidentialPardonForm;
-class RobotomyRequestForm;
-class ShrubberyCreationForm;
 
 #include <iostream>
 #include "Bureaucrat.hpp"

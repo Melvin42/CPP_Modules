@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 01:43:09 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:46:28 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,11 @@ void	Bureaucrat::signForm(AForm &form) const {
 		std::cout <<_name << " couldn't sign " << form.getName()
 			<< " because is grade is too low." << std::endl;
 	}
+}
+
+void	Bureaucrat::executeForm(AForm const &form) const {
+
+	return ;
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw() {

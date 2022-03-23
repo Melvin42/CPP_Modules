@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:10:51 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:35:20 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,6 @@ int	main() {
 		president->action();
 		robotomy->action();
 		shrubbery->action();
-//		std::cout << form << std::endl;
-//		bob.signForm(form);
-//		form.beSigned(bob);
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
