@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:37:07 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/22 18:37:07 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:20:10 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #define END_COLOR "\033[0m"
 
 class Bureaucrat;
+class PresidentialPardonForm;
+class RobotomyRequestForm;
+class ShrubberyCreationForm;
 
 #include <iostream>
 #include "Bureaucrat.hpp"
@@ -35,6 +38,7 @@ class AForm {
 		int			getExecGrade() const;
 
 		void		beSigned(const Bureaucrat &bureaucrat);
+		void		execute(Bureaucrat const & executor) const;
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();
@@ -44,7 +48,8 @@ class AForm {
 			virtual const char *what() const throw();
 		};
 
-		virtual std::string	getTarget() = 0;
+		virtual std::string	getTarget() const = 0;
+		virtual void		action() const;
 
 		AForm &operator=(const AForm &form);
 

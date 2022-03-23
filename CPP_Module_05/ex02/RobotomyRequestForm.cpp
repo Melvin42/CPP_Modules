@@ -6,13 +6,14 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:23:36 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/22 17:23:36 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:19:23 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() {
+RobotomyRequestForm::RobotomyRequestForm()
+	: AForm("Robotomy", false, 72, 137) {
 	std::cout << GREEN_IT << "Default RobotomyRequestForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
@@ -25,7 +26,8 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target)
 	return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &form) {
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &form)
+	: AForm(form) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy RobotomyRequestForm constructor called"
 		<< END_COLOR << std::endl;
@@ -38,11 +40,25 @@ RobotomyRequestForm::~RobotomyRequestForm() {
 	return ;
 }
 
-std::string	RobotomyRequestForm::getTarget() {
+std::string	RobotomyRequestForm::getTarget() const {
 	return _target;
 }
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &form) {
+void	RobotomyRequestForm::action() const {
+	srand((unsigned)time(0));
+
+	std::cout << "Some drilling noises!!!" << std::endl;
+
+	if ((rand() % 100) % 2 == 0) {
+		std::cout << _target
+			<< " has been robotomized successfully!" << std::endl;
+	} else {
+		std::cout << "Robotomy failed..." << std::endl;
+	}
+	return ;
+}
+
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm & /* form */) {
 	std::cout << "Copy RobotomyRequestForm assignement operator called"
 		<< std::endl;
 	return *this;

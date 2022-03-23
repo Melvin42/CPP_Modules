@@ -6,13 +6,14 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:48:46 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 04:48:46 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:19:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm() {
+ShrubberyCreationForm::ShrubberyCreationForm()
+	: AForm("Shrubbery", false, 145, 137) {
 	std::cout << GREEN_IT << "Default ShrubberyCreationForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
@@ -25,7 +26,8 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form) {
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form)
+	: AForm(form) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy ShrubberyCreationForm constructor called"
 		<< END_COLOR << std::endl;
@@ -38,11 +40,11 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 	return ;
 }
 
-std::string	ShrubberyCreationForm::getTarget() {
+std::string	ShrubberyCreationForm::getTarget() const {
 	return _target;
 }
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &form) {
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm & /* form */) {
 	std::cout << "Copy ShrubberyCreationForm assignement operator called"
 		<< std::endl;
 	return *this;
@@ -57,9 +59,14 @@ std::ostream &operator<<(std::ostream &os, const ShrubberyCreationForm &form) {
 		<< form.getExecGrade() << ".";
 	return os;
 }
-/*
-void	asdf(void) {
-	std:: cout << "                                           ..                  .:\n"
+
+void	ShrubberyCreationForm::action() const {
+	std::ofstream	out_file;
+	std::string		file_name;
+
+	file_name = this->getTarget().append("_shrubbery");
+	out_file.open(file_name.c_str(), std::ofstream::out | std::ofstream::trunc);
+	out_file << "                                           ..                  .:\n"
 			<< "                                          .==.                .-=.\n"
 			<< "                                        :-*@@+=:            :-+@@*=:\n"
 			<< "                                         .=%#-               .-##-.\n"
@@ -125,4 +132,3 @@ void	asdf(void) {
 
 	return ;
 }
-*/

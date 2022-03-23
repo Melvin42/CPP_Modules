@@ -6,13 +6,14 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:47:02 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 04:47:02 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:20:35 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() {
+PresidentialPardonForm::PresidentialPardonForm()
+	: AForm("President", false, 25, 5) {
 	std::cout << GREEN_IT << "Default PresidentialPardonForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
@@ -25,7 +26,8 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target)
 	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &form) {
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &form)
+	: AForm(form) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy PresidentialPardonForm constructor called"
 		<< END_COLOR << std::endl;
@@ -38,11 +40,17 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 	return ;
 }
 
-std::string	getTarget() {
+std::string	PresidentialPardonForm::getTarget() const {
 	return _target;
 }
 
-PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &form) {
+void		PresidentialPardonForm::action() const {
+	std::cout << _target << " has been pardonned by Zaphod Beeblebrox"
+		<< std::endl;
+	return ;
+}
+
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm & /* form */) {
 	std::cout << "Copy PresidentialPardonForm assignement operator called"
 		<< std::endl;
 	return *this;

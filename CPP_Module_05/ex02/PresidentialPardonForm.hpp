@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:47:13 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/22 17:05:33 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:18:58 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #define GREEN_IT "\033[32;3m"
 #define END_COLOR "\033[0m"
+
+class AForm;
 
 #include <iostream>
 #include "AForm.hpp"
@@ -27,11 +29,12 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm(const PresidentialPardonForm &form);
 		~PresidentialPardonForm();
 
-		std::string	getTarget();
+		virtual std::string	getTarget() const;
+		virtual void		action() const;
 
-		PresidentialPardonForm &operator=(const PresidentialPardonForm &form);
 	private:
 		const std::string	_target;
+		PresidentialPardonForm &operator=(const PresidentialPardonForm & /* form */ );
 };
 
 std::ostream &operator<<(std::ostream &os, const PresidentialPardonForm &form);
