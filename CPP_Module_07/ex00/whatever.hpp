@@ -6,31 +6,27 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 15:48:10 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/25 15:56:19 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/29 14:51:58 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 #define WHATEVER_HPP
 
-void	swap(int *a, int *b) {
-	int	tmp;
+template <class T> void	swap(T &a, T &b) {
+	T	tmp;
 
-	tmp = *b;
-	*b = *a;
-	*a = tmp;
+	tmp = b;
+	b = a;
+	a = tmp;
 }
 
-int		min(int a, int b) {
-	if (a < b)
-		return a;
-	return b;
+template <class T> T	min(T a, T b) {
+		return (a < b ? a : b );
 }
 
-int		max(int a, int b) {
-	if (a > b)
-		return a;
-	return b;
+template <class T> T	max(T a, T b) {
+		return (a > b ? a : b );
 }
 
 #endif
