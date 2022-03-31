@@ -6,14 +6,14 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 15:48:10 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/29 14:51:58 by melperri         ###   ########.fr       */
+/*   Updated: 2022/03/29 15:43:03 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 #define WHATEVER_HPP
 
-template <class T> void	swap(T &a, T &b) {
+template <typename T> void	swap(T &a, T &b) {
 	T	tmp;
 
 	tmp = b;
@@ -21,11 +21,11 @@ template <class T> void	swap(T &a, T &b) {
 	a = tmp;
 }
 
-template <class T> T	min(T a, T b) {
+template <typename T> T	const &min(T const &a, T const &b) {
 		return (a < b ? a : b );
 }
 
-template <class T> T	max(T a, T b) {
+template <typename T> T	const &max(T a, T b) {
 		return (a > b ? a : b );
 }
 
