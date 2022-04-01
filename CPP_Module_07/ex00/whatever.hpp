@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 15:48:10 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/29 15:43:03 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/01 19:06:27 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ template <typename T> void	swap(T &a, T &b) {
 	a = tmp;
 }
 
-template <typename T> T	const &min(T const &a, T const &b) {
+template <typename T> T	const &min(T const &a, T const &b) {;;
 		return (a < b ? a : b );
 }
 

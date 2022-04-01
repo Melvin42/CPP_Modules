@@ -1,4 +1,4 @@
-NAME = template
+NAME = ezFind
 
 CC = c++
 

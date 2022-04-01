@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 15:40:53 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/29 14:56:29 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/01 19:09:11 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "whatever.hpp"
 
 int	main() {
-
 	{
 		int a = 0;
 		int b = 42;
