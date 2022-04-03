@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:07:56 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/03 19:16:15 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/03 20:11:54 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,51 +34,46 @@ Span::~Span() {
 }
 
 void	Span::addNumber(unsigned int n) {
-//	std::cout << _size ;
 	if (_vector.size() + 1 <= _size)
 		this->_vector.push_back(n);
 	else
-		throw std::out_of_range("than unsigned int");
+		throw ContentFullException();
 }
 
 void	display(int i) {
 	std::cout << i << std::endl;
 }
+
 void	Span::addNumbers(std::vector<int>::const_iterator first,
 		std::vector<int>::const_iterator last) {
-	std::vector<int>::const_iterator tmp = first;
-
 	while (first != last) {
-		this->_vector.push_back(*first);
+		this->addNumber(*first);
 		first++;
 	}
-	for_each(tmp, last, display);
-//	else
-//		throw std::out_of_range("N bigger than unsigned int");
 }
 
 int	Span::shortestSpan() {
 	std::vector<int>::const_iterator	tmp, next;
-	int value = 0;
-	size_t i = 0;
+	int									value = 0;
+	int									min = INT_MAX;
 
-	for_each(this->_vector.begin(), this->_vector.end(), display);
 	std::sort(this->_vector.begin(), this->_vector.end());
 
-	while (i < 4) {
-		tmp = next;
-//		next = this->_vector.begin() + i;
-//		if (*tmp > *next) {
-//			if (*tmp - *next > value)
-//				value = *tmp - *next;
-//		} else if (*tmp < *next) {
-//			if (*next - *tmp > value)
-//				value = *next - *tmp;
-//		}
-		i++;
+	tmp = this->_vector.begin();
+	next = this->_vector.begin();
+	while (tmp != this->_vector.end()) {
+		next = tmp + 1;
+		while (next != this->_vector.end()) {
+			value = std::abs(*tmp - *next);
+			next++;
+			if (value == 0)
+				return 0;
+			if (value < min)
+				min = value;
+		}
+		tmp++;
 	}
-
-	return value;
+	return min;
 }
 
 int	Span::longestSpan() const {
