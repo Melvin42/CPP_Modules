@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:37:07 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:23:13 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 13:27:48 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ class AForm {
 
 		void		beSigned(const Bureaucrat &bureaucrat);
 		void		execute(Bureaucrat const & executor) const;
+
+		class CantExecuteException: public std::exception {
+			virtual const char *what() const throw();
+		};
 
 		class GradeTooHighException : public std::exception {
 			virtual const char *what() const throw();

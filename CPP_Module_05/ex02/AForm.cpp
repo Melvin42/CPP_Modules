@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:37:17 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:18:36 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 13:44:26 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,18 @@ void	AForm::beSigned(const Bureaucrat &bureaucrat) {
 
 void	AForm::execute(Bureaucrat const &executor) const {
 	if (this->getSign() == true
-		&& executor.getGrade() <= this->getSignGrade())
+		&& executor.getGrade() <= this->getSignGrade()) {
 		this->action();
-	else
-		std::cout << this->getName() << " not be able to execute "
+	} else {
+		std::cout << executor.getName() << " not be able to execute "
 			<< this->getName() << " form.." << std::endl;
+		throw CantExecuteException();
+	}
 	return ;
+}
+
+const char	*AForm::CantExecuteException::what() const throw() {
+	return "Can't Execute Exception";
 }
 
 const char	*AForm::GradeTooHighException::what() const throw() {
