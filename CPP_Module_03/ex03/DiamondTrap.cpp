@@ -6,27 +6,31 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 19:14:48 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/22 14:50:01 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 11:49:31 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap() : ScavTrap("Diamond"), FragTrap("Diamond") {
-	this->ScavTrap::setName("Diamond");
-	this->FragTrap::setHit(FragTrap::getHit());
-	this->ScavTrap::setEnergy(ScavTrap::getEnergy());
-	this->FragTrap::setAttack(FragTrap::getAttack());
+	ScavTrap	scavtrap;
+	FragTrap	fragtrap;
+
+	this->setHit(fragtrap.getHit());
+	this->setEnergy(scavtrap.getEnergy());
+	this->setAttack(fragtrap.getAttack());
 	std::cout << GREEN_IT << "Diamondtrap " << this->ScavTrap::getName()
 		<< " default constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name) {
-	this->ScavTrap::setName(name);
-	this->FragTrap::setHit(FragTrap::getHit());
-	this->ScavTrap::setEnergy(ScavTrap::getEnergy());
-	this->FragTrap::setAttack(FragTrap::getAttack());
+	ScavTrap	scavtrap;
+	FragTrap	fragtrap;
+
+	this->setHit(fragtrap.getHit());
+	this->setEnergy(scavtrap.getEnergy());
+	this->setAttack(fragtrap.getAttack());
 	std::cout << GREEN_IT << "Diamondtrap " << this->ScavTrap::getName()
 		<< " parametric constructor called" << END_COLOR << std::endl;
 	return ;
