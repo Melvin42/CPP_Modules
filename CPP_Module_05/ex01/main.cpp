@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 01:36:34 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:45:33 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,11 @@ int	main() {
 		std::cout << bob << std::endl;
 		std::cout << form << std::endl;
 		bob.signForm(form);
-		form.beSigned(bob);
+
+		Form form2("hard", false, 1, 1);
+		Bureaucrat	marley("Marley", 150);
+		std::cout << form2 << std::endl;
+		marley.signForm(form2);
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;

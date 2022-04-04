@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 04:19:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 01:34:54 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:24:33 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	Form::getSignGrade() const {
 	return _sign_grade;
 }
 
-int Form::getExecGrade() const {
+int	Form::getExecGrade() const {
 	return _exec_grade;
 }
 
@@ -82,7 +82,7 @@ Form &Form::operator=(const Form &form) {
 	return *this;
 }
 
-std::ostream &operator<<(std::ostream &os, const Form &form) {
+std::ostream	&operator<<(std::ostream &os, const Form &form) {
 	os << form.getName() << ", form sign is "
 		<< form.getSign()
 		<< ",\nsign grade is "

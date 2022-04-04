@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:07:58 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/18 01:43:09 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:39:42 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,13 @@ void	Bureaucrat::signForm(Form &form) const {
 	if (form.getSign() == true) {
 		std::cout << _name << " signed " << form.getName() << std::endl;
 	} else {
-		std::cout <<_name << " couldn't sign " << form.getName()
-			<< " because is grade is too low." << std::endl;
+		try {
+			form.beSigned(*this);
+			std::cout << _name << " signed " << form.getName() << std::endl;
+		} catch (std::exception &e) {
+			std::cout << _name << " couldn't sign " << form.getName()
+				<< " because " << e.what() << std::endl;
+		}
 	}
 }
 
@@ -80,14 +85,14 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw() {;
 	return "Grade Too Low Exception";
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &bureaucrat) {
+Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &bureaucrat) {
 	_grade = bureaucrat._grade;
 	std::cout << GREEN_IT << "Copy " << _name << " assignement operator called"
 		<< END_COLOR << std::endl;
 	return *this;
 }
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat) {
+std::ostream	&operator<<(std::ostream &os, const Bureaucrat &bureaucrat) {
 	os << bureaucrat.getName() << ", bureaucrat grade "
 		<< bureaucrat.getGrade() << ".";
 	return os;
