@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:37:07 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/04 13:27:48 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 13:07:48 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AForm {
 
 		AForm();
 		AForm(const AForm &form);
-		AForm(std::string name, bool sign, int sign_grade, int exec_grade);
+		AForm(std::string name, int sign_grade, int exec_grade);
 		virtual ~AForm() = 0;
 
 		std::string	getName() const;
@@ -49,7 +49,6 @@ class AForm {
 			virtual const char *what() const throw();
 		};
 
-		virtual std::string	getTarget() const = 0;
 		virtual void		action() const;
 
 		AForm &operator=(const AForm &form);

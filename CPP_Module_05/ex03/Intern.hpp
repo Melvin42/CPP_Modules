@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:54:51 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/04 14:54:51 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/05 12:06:14 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 #define END_COLOR "\033[0m"
 
 #include <iostream>
-#include <cstdlib>
-#include <string>
-#include <cstring>
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"

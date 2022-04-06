@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 04:19:03 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/04 12:24:33 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:38:07 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Form::Form() : _name("Form"), _sign(false), _sign_grade(150), _exec_grade(150) {
 	return ;
 }
 
-Form::Form(std::string name, bool sign, int sign_grade, int exec_grade) :
-	_name(name), _sign(sign), _sign_grade(sign_grade), _exec_grade(exec_grade) {;
+Form::Form(std::string name, int sign_grade, int exec_grade) :
+	_name(name), _sign(false), _sign_grade(sign_grade), _exec_grade(exec_grade) {;
 	if (_sign_grade < 1 || _exec_grade < 1)
 		throw GradeTooHighException();
 	else if (_sign_grade > 150 || _exec_grade > 150)

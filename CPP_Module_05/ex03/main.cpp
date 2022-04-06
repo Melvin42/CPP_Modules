@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/04 13:54:13 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:32:08 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,13 +103,18 @@ int	main() {
 
 	try {
 		Intern	someRandomIntern;
+		Bureaucrat gege("Gege", 1);
+		Bureaucrat badgege("BadGege", 42);
 		AForm	*rrf;
 
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-		rrf->action();
+		gege.signForm(*rrf);
+		gege.executeForm(*rrf);
 		rrf = someRandomIntern.makeForm("presidential pardon", "Trump");
-		rrf->action();
-		rrf = someRandomIntern.makeForm("shrubbery creation", "Trump");
+		badgege.signForm(*rrf);
+		badgege.executeForm(*rrf);
+
+		delete rrf;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}

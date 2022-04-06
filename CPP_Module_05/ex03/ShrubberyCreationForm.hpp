@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 05:18:53 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:30:43 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:14:04 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class ShrubberyCreationForm : public AForm {
 		ShrubberyCreationForm(const ShrubberyCreationForm &form);
 		~ShrubberyCreationForm();
 
-		virtual std::string	getTarget() const;
-		virtual void		action() const;
+		std::string		getTarget() const;
+		virtual void	action() const;
 
 	private:
 		const std::string	_target;

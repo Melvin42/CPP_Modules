@@ -6,28 +6,28 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:47:02 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:20:35 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:33:46 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm()
-	: AForm("President", false, 25, 5) {
+	: AForm("President", 25, 5), _target("Default") {
 	std::cout << GREEN_IT << "Default PresidentialPardonForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	: _target(target) {
+	: AForm("President", 25, 5), _target(target) {
 	std::cout << GREEN_IT << "Parametric PresidentialPardonForm " << _target
 		<< " constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &form)
-	: AForm(form) {
+	: AForm(form), _target(form._target) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy PresidentialPardonForm constructor called"
 		<< END_COLOR << std::endl;

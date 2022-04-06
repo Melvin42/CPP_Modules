@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:47:13 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:23:26 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:55:07 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm(const PresidentialPardonForm &form);
 		~PresidentialPardonForm();
 
-		virtual std::string	getTarget() const;
-		virtual void		action() const;
+		std::string		getTarget() const;
+		virtual void	action() const;
 
 	private:
 		const std::string	_target;

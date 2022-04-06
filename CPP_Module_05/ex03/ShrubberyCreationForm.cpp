@@ -6,28 +6,28 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 04:48:46 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:24:03 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 13:05:19 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm()
-	: AForm("Shrubbery", false, 145, 137) {
+	: AForm("Shrubbery", 145, 137), _target("Default") {
 	std::cout << GREEN_IT << "Default ShrubberyCreationForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
-	: _target(target) {
+	: AForm("Shrubbery", 145, 137), _target(target) {
 	std::cout << GREEN_IT << "Parametric ShrubberyCreationForm " << _target
 		<< " constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form)
-	: AForm(form) {
+	: AForm(form), _target(form._target) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy ShrubberyCreationForm constructor called"
 		<< END_COLOR << std::endl;

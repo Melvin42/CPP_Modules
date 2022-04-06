@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:09:04 by melperri          #+#    #+#             */
-/*   Updated: 2022/04/04 13:45:10 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:41:08 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ int	main() {
 		robotomy->action();
 		shrubbery->action();
 
-		bob.set
 		bob.executeForm(*president);
 
 		delete president;

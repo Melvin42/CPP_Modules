@@ -6,7 +6,7 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 04:49:25 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/25 15:37:17 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:10:30 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ int	main() {
 
 	identify(p);
 	identify(ref);
+	identify(*p);
+
 	delete p;
-	return 0;
+	return -1;
 }

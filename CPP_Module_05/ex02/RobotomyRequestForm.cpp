@@ -6,28 +6,28 @@
 /*   By: melperri <melperri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:23:36 by melperri          #+#    #+#             */
-/*   Updated: 2022/03/23 16:19:23 by melperri         ###   ########.fr       */
+/*   Updated: 2022/04/06 13:10:41 by melperri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm()
-	: AForm("Robotomy", false, 72, 137) {
+	: AForm("Robotomy", 72, 137) {
 	std::cout << GREEN_IT << "Default RobotomyRequestForm constructor called"
 		<< END_COLOR << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
-	: _target(target) {
+	: AForm("Robotomy", 72, 137), _target(target) {
 	std::cout << GREEN_IT << "Parametric RobotomyRequestForm " << _target
 		<< " constructor called" << END_COLOR << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &form)
-	: AForm(form) {
+	: AForm(form), _target(form._target) {
 	*this = form;
 	std::cout << GREEN_IT << "Copy RobotomyRequestForm constructor called"
 		<< END_COLOR << std::endl;
